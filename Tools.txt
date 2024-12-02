@@ -1,0 +1,29 @@
+1. Finding subdomain:
+
+subfinder = https://github.com/projectdiscovery/subfinder
+
+sublist3r = https://github.com/aboul3la/Sublist3r
+
+subdomain finder = https://subdomainfinder.c99.nl/
+
+2. Finding Live subdomain:
+
+HTTPX = https://github.com/projectdiscovery/httpx
+
+3. Finding URLS:
+
+Katana = https://github.com/projectdiscovery/katana
+
+waybackurls = https://github.com/tomnomnom/waybackurls
+
+4. Directory Bruteforcing:
+
+dirsearch = https://github.com/maurosoria/dirsearch
+
+Extension:
+
+Bulk url Opener = https://chromewebstore.google.com/detail/bulk-url-opener-extension/hgenngnjgfkdggambccohomebieocekm?hl=en
+
+shodan = https://chromewebstore.google.com/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap
+
+Wappalyzer = https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg
