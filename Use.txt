@@ -1,0 +1,47 @@
+ Information Gathering : Active(direct) , Passive(indirect)
+
+1. understanding the Application 
+
+2. Finding the known Tech
+
+3. viewing the Page source for information disclosure
+
+4. Finding subdomains: example1.example.com
+
+   > subfinder -h
+      subfinder -d target.com -all -recursive > sub1.txt
+
+   > sublist3r -h
+      sublist3r -d example.com
+
+   > Amass -h
+      amass enum -d example.com
+
+   > subdomain finder web app
+      subdomainfinder.c99.nl > copy and past in file > sub2.txt
+
+   > Google dorking
+      site:*.example.com
+
+   > ffuf -h
+       ffuf -u https://FUZZ.Example.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt > sub3.txt
+       ffuf -u https://example.com -H "Host:FUZZ.example.com" -w /usr/shrare/seclist/Discovery/Dns/subdomain-top1million.txt
+
+5. Finding live subdomain: Resole , Live
+   
+   > HTTPX:    
+   > without code > cat sub_domain | httpx > live_sub
+   > with code > cat live_sub | httpx -sc  -location -rl 10 -td > live_sub_code
+   > only '200' > cat live_sub | httpx -sc | grep 200 | > live_sub_200
+
+   ( ChatGPT Remove all )
+
+6. Finding url's : example.com/admin/loginpanel/password?user=user1&pass=hacked
+
+   > katana  > katana -u https://subdomain.com > urls
+   > waybackurl's > waybackurl -u https://subdomain.com > urls
+
+7. Finding directory : example.com/admin/loginpanel/
+ 
+   > dirsearch > python3 dirsearch.py -u http://testphp.vulnweb.com/
+   > python3 dirsearch.py -u http://example.com/ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
